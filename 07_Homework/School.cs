@@ -19,14 +19,14 @@ namespace _Homework
 
 		public void addCourse(string name)
 		{
-            //done
+            //done by Chris
             var newCourse = new Course(name);
             courses.Add(newCourse);
 		}
 
 		public void addStudent(string name, int creditLimited)
 		{
-            //done
+            //done by Chris
             var newStudent = new Student(name, creditLimited);
             students.Add(newStudent);
 		}
@@ -35,7 +35,7 @@ namespace _Homework
 		{
 			if (checkStudentCanEnroll(students[studentIndex], courses[courseIndex]))
 			{
-                //done
+                //done by Chris
                 var courseToStudent = new CourseToStudent(courses[courseIndex], students[studentIndex]);
                 courseToStudents.Add(courseToStudent);
 			}
@@ -73,7 +73,7 @@ namespace _Homework
 		
         public void printStudent()
 		{
-			//done
+            //done by Chris
             foreach(var s in students){
                 Console.WriteLine(students.IndexOf(s) + 1 + ", " + s);
             }
@@ -81,7 +81,7 @@ namespace _Homework
 		
         public void printCourse()
 		{
-			//done
+            //done by Chris
             foreach(var c in courses){
                 Console.WriteLine(courses.IndexOf(c)+1+", "+c);
             }
@@ -116,7 +116,7 @@ namespace _Homework
        
 		private List<Student> getStudentsFromCourse(Course course)
 		{
-            //done
+            //done by Chris
             List<Student> enrolledStudent = new List<Student>();
             foreach(var record in courseToStudents){
                 if(record.course.Equals(course)){
@@ -129,7 +129,7 @@ namespace _Homework
 
 		private List<Course> getCourseFromStudent(Student student)
 		{
-            //done
+            //done by Chris
             List<Course> courseFromStudents = new List<Course>();
             foreach(var record in courseToStudents){
                 if(record.student.Equals(student)){
